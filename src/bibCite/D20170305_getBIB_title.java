@@ -65,7 +65,7 @@ public class D20170305_getBIB_title {
 	 * 
 	 * @throws InterruptedException
 	 */
-	private void run(String title) throws InterruptedException {
+	void run(String title) throws InterruptedException {
 		// TODO Auto-generated method stub
 				
 		//If the chromedriver.exe has already been placed in the PATH folder, then cancel this line.
@@ -79,7 +79,7 @@ public class D20170305_getBIB_title {
 		
 		//open google scholar page.
 		driver.get("https://scholar.google.com/");
-		Thread.sleep(1000);  // Let the user actually see something! 
+		Thread.sleep(500);  // Let the user actually see something! 
 		//Also, this step is very import to make sure the code will export CSV document instead of TMP docs.
 			 
 		//get the query box by ID: q
@@ -99,7 +99,7 @@ public class D20170305_getBIB_title {
 			
 			//click the Cite button.
 			cite_button.click();
-			Thread.sleep(1000);  // Let the user actually see something! 
+			Thread.sleep(500);  // Let the user actually see something! 
 			
 			
 			//check if BibText button is visiable;
@@ -112,7 +112,7 @@ public class D20170305_getBIB_title {
 				
 				//click the bibTeX button.
 				bib_button.click(); 
-				Thread.sleep(1000); //give user time to copy the bib doc. 
+				Thread.sleep(500); //give user time to copy the bib doc. 
 				
 				//select and copy the body txt:
 				driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL + "a");;
